@@ -1,0 +1,311 @@
+/* Import a thin Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply the font to the whole page */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f0f2f5;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #282c34;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2em;
+    margin-right: 2em;
+    width: 100%;
+}
+
+/* Position the Home link on the left */
+.home-link {
+    margin-right: auto; /* Pushes the other links to the right */
+    margin-left: 1em;
+}
+
+/* Keep the logo red and unpressable on the Home page */
+.home-link.active .logo {
+    filter: grayscale(0%); /* Keeps it red */
+    pointer-events: none; /* Makes it unpressable */
+    cursor: default;
+}
+
+/* Logo styling */
+.logo {
+    height: 40px; /* Adjust to desired logo size */
+    width: auto;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+    filter: grayscale(100%); /* Starts with grayscale */
+}
+
+.logo:hover {
+    filter: grayscale(0%); /* Applies vibrant red */
+    opacity: 0.9; /* Slight opacity effect */
+}
+
+/* Styling for other links */
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+    user-select: none;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ff3b3b;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+/* Active page link styling */
+nav ul li a.active {
+    color: #ff3b3b;
+    pointer-events: none;
+    font-weight: 400;
+    cursor: default;
+}
+
+nav ul li a.active::after {
+    width: 100%;
+    background-color: #ff3b3b;
+}
+
+/* Main content styling */
+main {
+    width: 900px;
+    text-align: center;
+    padding: 3em 1.5em;
+    margin-top: 1.5em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+main h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #222;
+    margin-bottom: 0.5em;
+    transition: color 0.3s ease;
+}
+
+main p {
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 2em;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+}
+
+/* Team Section Styling */
+.team-section {
+    text-align: center;
+    padding: 3em 1em;
+    background-color: #f9f9f9;
+}
+
+.team-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+}
+
+.team-cards {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+}
+
+.team-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2em 1.5em;
+    width: 250px; /* Fixed width to keep cards side by side */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Rounded corners */
+    margin-bottom: 1em;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-photo {
+    transform: scale(1.05);
+}
+
+.team-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.team-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5em;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .team-cards {
+        flex-direction: column; /* Stacks cards vertically on smaller screens */
+    }
+}
+
+/* Timeline Section Styling */
+.timeline-section {
+    text-align: center;
+    padding: 3em 1em;
+    background-color: #f9f9f9;
+}
+
+.timeline-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2em;
+    font-weight: bold;
+}
+
+/* Centered Timeline Styling */
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+.timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    word-wrap: break-word; /* Breaks long words */
+    hyphens: auto; /* Adds hyphens for better word breaks */
+}
+
+/* Adjustments to keep panels within the container */
+.timeline-content.left {
+    margin-right: 55%; /* Positions left-aligned panels within the container */
+}
+
+.timeline-content.right {
+    margin-left: 55%; /* Positions right-aligned panels within the container */
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Date Styling */
+.date {
+    display: inline-block;
+    margin-bottom: 0.5em;
+    padding: 0.3em 0.8em;
+    background-color: #ff3b3b;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 5px;
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+    .timeline-content {
+        width: 100%; /* Full width on smaller screens */
+        margin: 0; /* Center the panels */
+    }
+}
