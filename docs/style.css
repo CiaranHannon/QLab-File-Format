@@ -343,11 +343,10 @@ main p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-size: 1.1rem;
     color: #555;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Completed goals styling */
-.goals-list .completed {
+.goals-list li .completed {
     text-decoration: line-through; /* Adds strikethrough */
     color: #888; /* Darkens the text */
     background-color: #f0f0f0; /* Optional: lighter background to differentiate */
