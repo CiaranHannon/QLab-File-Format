@@ -346,7 +346,7 @@ main p {
 }
 
 /* Completed goals styling */
-.goals-list li .completed {
+.goals-list li.completed {
     text-decoration: line-through; /* Adds strikethrough */
     color: #888; /* Darkens the text */
     background-color: #f0f0f0; /* Optional: lighter background to differentiate */
