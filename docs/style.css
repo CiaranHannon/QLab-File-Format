@@ -351,3 +351,74 @@ main p {
     color: #888; /* Darkens the text */
     background-color: #f0f0f0; /* Optional: lighter background to differentiate */
 }
+
+/* Inspiration Section Styling */
+.inspiration-section {
+    padding: 3em 1em;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.inspiration-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2em;
+    font-weight: bold;
+}
+
+/* Inspiration Panel Styling */
+.inspiration-panel {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    margin: 1.5em auto;
+    max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inspiration-panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Image Styling */
+.project-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    margin-right: 1.5em;
+    object-fit: cover;
+}
+
+/* Project Details Styling */
+.project-details {
+    text-align: left;
+}
+
+.project-name {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.project-link {
+    display: inline-block;
+    margin-bottom: 1em;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #0056b3;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
