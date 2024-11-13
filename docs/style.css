@@ -345,9 +345,3 @@ main p {
     color: #555;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* Hover effect on each goal */
-.goals-list li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
