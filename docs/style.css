@@ -345,3 +345,10 @@ main p {
     color: #555;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Completed goals styling */
+.goals-list .completed {
+    text-decoration: line-through; /* Adds strikethrough */
+    color: #888; /* Darkens the text */
+    background-color: #f0f0f0; /* Optional: lighter background to differentiate */
+}
