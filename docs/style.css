@@ -276,6 +276,11 @@ main p {
     hyphens: auto; /* Adds hyphens for better word breaks */
 }
 
+.p a {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
 /* Adjustments to keep panels within the container */
 .timeline-content.left {
     margin-right: 55%; /* Positions left-aligned panels within the container */
