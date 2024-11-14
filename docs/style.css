@@ -276,7 +276,7 @@ main p {
     hyphens: auto; /* Adds hyphens for better word breaks */
 }
 
-.p a {
+.timeline-content p a {
     color: #ff6b6b;
     text-decoration: none;
 }
